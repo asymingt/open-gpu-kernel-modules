@@ -1292,6 +1292,17 @@ Arm_NeoverseN1_setupFunc
     return NV_OK;
 }
 
+static NV_STATUS
+Freescale_LX2160a_setupFunc
+(
+    OBJCL *pCl
+)
+{
+    // TODO Need to check if any more PDB properties should be set
+    pCl->setProperty(pCl, PDB_PROP_CL_IS_CHIPSET_IO_COHERENT, NV_TRUE);
+    return NV_OK;
+}
+
 void
 csGetInfoStrings
 (

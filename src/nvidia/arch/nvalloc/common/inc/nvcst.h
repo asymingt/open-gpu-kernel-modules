@@ -91,7 +91,7 @@ CHIPSET_SETUP_FUNC(Ampere_Altra_setupFunc)
 CHIPSET_SETUP_FUNC(Arm_NeoverseN1_setupFunc)
 CHIPSET_SETUP_FUNC(Nvidia_T210_setupFunc)
 CHIPSET_SETUP_FUNC(Nvidia_T194_setupFunc)
-
+CHIPSET_SETUP_FUNC(Freescale_LX2160a_setupFunc)
 
 // Keep string length <=32 (including termination) to avoid string copy overflow
 CSINFO chipsetInfo[] =
@@ -256,6 +256,7 @@ CSINFO chipsetInfo[] =
     {PCI_VENDOR_ID_HYGON,       0x790E, CS_HYGON_C86,      "Hygon-C86-7151",   NULL},
     {PCI_VENDOR_ID_MARVELL,     0xA02D, CS_MARVELL_OCTEON_CN96XX, "Marvell Octeon CN96xx", ARMV8_generic_setupFunc},
     {PCI_VENDOR_ID_MARVELL,     0xA02D, CS_MARVELL_OCTEON_CN98XX, "Marvell Octeon CN98xx", ARMV8_generic_setupFunc},
+    {PCI_VENDOR_ID_FREESCALE,   0x8D90, CS_FREESCALE_LX2160A, "Freescale Layerscape LX2160a", Freescale_LX2160a_setupFunc},
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -290,6 +291,7 @@ VENDORNAME vendorName[] =
     {PCI_VENDOR_ID_FUJITSU,     "Fujitsu"},
     {PCI_VENDOR_ID_CADENCE,     "Cadence"},
     {PCI_VENDOR_ID_ARM,         "ARM"},
+    {PCI_VENDOR_ID_FREESCALE,   "Freescale"},
     {0,                         "Unknown"} // Indicates end of the table
 };
 

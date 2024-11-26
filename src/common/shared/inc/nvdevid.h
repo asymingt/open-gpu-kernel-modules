@@ -146,6 +146,7 @@
 #define PCI_VENDOR_ID_ARM           0x13B5
 #define PCI_VENDOR_ID_HYGON         0x1D94
 #define PCI_VENDOR_ID_ALIBABA       0x1DED
+#define PCI_VENDOR_ID_FREESCALE     0x1957
 
 #define NV_PCI_DEVID_DEVICE                    31:16  /* RW--F */
 #define NV_PCI_SUBID_DEVICE                    31:16  /* RW--F */
@@ -632,6 +633,7 @@ enum {
 ,     CS_INTEL_7A04
 ,     CS_INTEL_5795
 ,     CS_AMPERE_AMPEREONE
+,     CS_FREESCALE_LX2160A
 ,     CS_MAX_PCIE
 };
 

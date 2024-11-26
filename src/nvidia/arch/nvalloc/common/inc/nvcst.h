@@ -95,7 +95,7 @@ CHIPSET_SETUP_FUNC(Nvidia_T194_setupFunc)
 CHIPSET_SETUP_FUNC(Nvidia_TH500_setupFunc)
 CHIPSET_SETUP_FUNC(PLDA_XpressRichAXI_setupFunc)
 CHIPSET_SETUP_FUNC(Riscv_generic_setupFunc)
-
+CHIPSET_SETUP_FUNC(Freescale_LX2160a_setupFunc)
 
 // Keep string length <=32 (including termination) to avoid string copy overflow
 CSINFO chipsetInfo[] =
@@ -280,6 +280,7 @@ CSINFO chipsetInfo[] =
     {PCI_VENDOR_ID_AMPERE,      0xE205, CS_AMPERE_AMPEREONE, "Ampere AmpereOne", Ampere_AmpereOne_setupFunc},
     {PCI_VENDOR_ID_AMPERE,      0xE206, CS_AMPERE_AMPEREONE, "Ampere AmpereOne", Ampere_AmpereOne_setupFunc},
     {PCI_VENDOR_ID_AMPERE,      0xE207, CS_AMPERE_AMPEREONE, "Ampere AmpereOne", Ampere_AmpereOne_setupFunc},
+    {PCI_VENDOR_ID_FREESCALE,   0x8D90, CS_FREESCALE_LX2160A, "Freescale Layerscape LX2160a", Freescale_LX2160a_setupFunc},
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -317,6 +318,7 @@ VENDORNAME vendorName[] =
     {PCI_VENDOR_ID_ALIBABA,     "Alibaba"},
     {PCI_VENDOR_ID_SIFIVE,      "SiFive"},
     {PCI_VENDOR_ID_PLDA,        "PLDA"},
+    {PCI_VENDOR_ID_FREESCALE,   "Freescale"},
     {0,                         "Unknown"} // Indicates end of the table
 };
 
@@ -389,6 +391,8 @@ ARMCSALLOWLISTINFO armChipsetAllowListInfo[] =
     {PCI_VENDOR_ID_AMPERE,      0xE205, CS_AMPERE_AMPEREONE},   // Ampere AmpereOne
     {PCI_VENDOR_ID_AMPERE,      0xE206, CS_AMPERE_AMPEREONE},   // Ampere AmpereOne
     {PCI_VENDOR_ID_AMPERE,      0xE207, CS_AMPERE_AMPEREONE},   // Ampere AmpereOne
+
+    {PCI_VENDOR_ID_FREESCALE,   0x8D90, CS_FREESCALE_LX2160A},  // Freescale LX2160a
 
     // last element must have chipset CS_UNKNOWN (zero)
     {0,                         0,      CS_UNKNOWN}

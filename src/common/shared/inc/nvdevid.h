@@ -149,6 +149,7 @@
 #define PCI_VENDOR_ID_ALIBABA       0x1DED
 #define PCI_VENDOR_ID_SIFIVE        0xF15E
 #define PCI_VENDOR_ID_PLDA          0x1556
+#define PCI_VENDOR_ID_FREESCALE     0x1957
 
 #define NV_PCI_DEVID_DEVICE                    31:16  /* RW--F */
 #define NV_PCI_SUBID_DEVICE                    31:16  /* RW--F */
@@ -636,6 +637,7 @@ enum {
 ,     CS_SIFIVE_FU740_C000
 ,     CS_PLDA_XPRESSRICH_AXI_REF
 ,     CS_AMPERE_AMPEREONE
+,     CS_FREESCALE_LX2160A
 ,     CS_MAX_PCIE
 };
 
